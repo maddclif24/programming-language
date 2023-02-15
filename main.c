@@ -1,8 +1,11 @@
 #include <stdio.h>
 
 int main() {
-    char text[20];
-    scanf("%s", text);
-    printf("%s", text);
+    char text;
+    text = getchar();
+    while (text != '\n') {
+        putchar(text);
+        text = getchar();
+    }
     return 0;
 }
