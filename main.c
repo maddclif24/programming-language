@@ -1,11 +1,15 @@
 #include <stdio.h>
 
 int main() {
-    char text;
-    text = getchar();
-    while (text != '\n') {
-        putchar(text);
-        text = getchar();
+  int text;
+  text = getchar();
+  while (text != EOF) {
+    if (text == '\n') {
+      text = '\n';
+    } else {
+      putchar(text);
+      text = getchar();
     }
-    return 0;
+  }
+  return 0;
 }
